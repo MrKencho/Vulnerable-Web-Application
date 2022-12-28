@@ -23,7 +23,7 @@ pipeline {
       stage('Semgrep-Scan') {
         steps {
           sh 'pip3 install semgrep'
-          sh 'semgrep --config p/ci --output /home/kali/Desktop/SemgrepOutput/scan_results.json --json'
+          sh 'semgrep --config p/ci --output scan_results.json --json'
       }
     }
   }
