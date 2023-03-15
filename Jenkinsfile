@@ -25,7 +25,7 @@ pipeline {
           sh 'pip3 install semgrep'
           sh 'pwd'
           //sh 'semgrep --config p/default --output scan_results.json --json'
-          sh 'semgrep --config p/default --exclude="SQL"'
+          sh 'semgrep --config p/default'
       }
     }
   }
