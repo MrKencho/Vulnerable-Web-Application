@@ -1,5 +1,4 @@
 pipeline {
-  sh 'cd temp'
   agent any
     //environment {
       // The following variable is required for a Semgrep App-connected scan:
@@ -25,7 +24,8 @@ pipeline {
         steps {
           sh 'pip3 install semgrep'
           sh 'pwd'
-          sh 'semgrep --config p/ci --output scan_results.json --json'
+          //sh 'semgrep --config p/default --output scan_results.json --json'
+          sh 'semgrep --config p/default'
       }
     }
   }
