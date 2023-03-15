@@ -1,4 +1,5 @@
 pipeline {
+  sh 'cd temp'
   agent any
     //environment {
       // The following variable is required for a Semgrep App-connected scan:
